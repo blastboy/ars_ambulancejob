@@ -107,12 +107,7 @@ end
 
 function initGarage(data, jobs)
     for index, garage in pairs(data) do
-        local ped = utils.createPed(garage.model, garage.pedPos)
-
-
-        FreezeEntityPosition(ped, true)
-        SetEntityInvincible(ped, true)
-        SetBlockingOfNonTemporaryEvents(ped, true)
+        local ped = utils.createPed(garage.model, garage.pedPos[1], garage.pedPos[2], garage.pedPos[3] ,garage.pedPos[4])
 
         exports.ox_target:addLocalEntity(ped, {
             {
