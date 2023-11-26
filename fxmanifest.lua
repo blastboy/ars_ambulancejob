@@ -13,19 +13,14 @@ author 'Arius Development'
 --Manifest--
 --#--
 
---if QBX
--- modules {
--- 	'qbx_core:playerdata',
---     'qbx_core:utils'
--- }
-
 shared_scripts {
 	'@ox_lib/init.lua',
-    --'@qbx_core/import.lua', --QBX
+    '@qbx_core/modules/utils.lua',
 	'config.lua',
 }
 
 client_scripts {
+    '@qbx_core/modules/playerdata.lua',
 	"client/modules/weapons.lua",
 	"client/modules/utils.lua",
 
